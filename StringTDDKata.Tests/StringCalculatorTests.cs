@@ -18,5 +18,12 @@ namespace StringTDDKata.Tests
             var result = sut.Add("");
             Assert.Equal(0, result);
         }
+
+        [Fact]
+        public void Add_Returns_1_For_1()
+        {
+            var result = sut.Add("1");
+            Assert.Equal(1, result);
+        }
     }
 }
