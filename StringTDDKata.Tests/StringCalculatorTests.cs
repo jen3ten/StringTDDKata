@@ -5,13 +5,18 @@ namespace StringTDDKata.Tests
 {
     public class StringCalculatorTests
     {
-        private StringCalculator sut;
+        StringCalculator sut;
 
+        public StringCalculatorTests()
+        {
+            sut = new StringCalculator();
+        }
 
         [Fact]
-        public void Add_Returns_0_For()
+        public void Add_Returns_0_For_Empty_String()
         {
-
+            var result = sut.Add("");
+            Assert.Equal(0, result);
         }
     }
 }
